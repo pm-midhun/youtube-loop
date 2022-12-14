@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Loop",
+  "description": "This extension will loop the media you are playing",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts":[
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["autoplay.js"]
+    }
+  ],
+  "action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+   "activeTab",
+   "storage",
+   "tabs",
+   "scripting"
+   ]
+}
