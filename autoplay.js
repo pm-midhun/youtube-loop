@@ -16,6 +16,7 @@ const bindEvent =  () => {
         videoElem.addEventListener("ended", function(){
             videoElem.play(); 
         });
+        alredayBinded = true;
     }
 }
 
